@@ -1,0 +1,26 @@
+.header-bg {
+	background-color: var(--color-grey-5);
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 1.75rem 0;
+}
+
+.logo span {
+	color: var(--color-brand-1);
+}
+
+.header .btn {
+	width: 100%;
+}
+
+@media (min-width: 700px) {
+	.header {
+		flex-direction: row;
+		align-items: center;
+	}
+}

@@ -1,0 +1,100 @@
+/* Desenvolva a estilização da sua página aqui */
+
+.app-header {
+	margin: 1.75rem 0;
+}
+
+.filter-list {
+	display: flex;
+	gap: 14px;
+	align-items: center;
+	margin-top: 38px;
+}
+
+.finance-list {
+	display: grid;
+	gap: 20px 0;
+}
+
+.finance-total {
+	display: flex;
+	background-color: var(--color-grey-4);
+	padding: 0.875rem 1rem;
+	justify-content: space-between;
+	margin-bottom: 28px;
+	border-radius: var(--radius-1);
+}
+
+.finance-list-item {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	border: 1.5px solid var(--color-grey-5);
+	border-radius: var(--radius-1);
+	animation: slide 0.4s ease;
+}
+
+.finance-list-item:hover {
+	border: 1.5px solid var(--color-brand-1);
+}
+
+.finance-list-item .category {
+	background-color: var(--color-grey-4);
+	color: var(--color-grey-2);
+	align-self: center;
+	padding: 0.2rem 0.75rem;
+	border-radius: var(--radius-2);
+	width: 65px;
+	text-align: center;
+}
+
+.finance-list-item .btn {
+	border-radius: var(--radius-2);
+	background-color: var(--color-mode);
+	border: 1.5px solid var(--color-grey-5);
+	padding: 0.4rem 0.6rem;
+	background: url(../../assets/trash.svg) no-repeat center;
+	width: 34px;
+	height: 30px;
+}
+
+.finance-list-item .btn:hover {
+	background: url(../../assets/trash-hover.svg) no-repeat center;
+	background-color: var(--color-grey-5);
+	border-radius: 1.5px solid var(--color-grey-4);
+}
+
+.empty {
+	display: grid;
+	gap: 1rem;
+	text-align: center;
+	background-color: var(--color-grey-5);
+	border-radius: var(--radius-1);
+	border: 1.5px dashed var(--color-grey-3);
+	padding: 1rem 0rem;
+	cursor: pointer;
+}
+
+.empty > * {
+	pointer-events: none;
+}
+
+.empty p {
+	color: var(--color-grey-2);
+}
+
+.empty.hide {
+	display: none;
+}
+
+@media (min-width: 700px) {
+	.app-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.filter-list {
+		margin-top: 0px;
+	}
+}

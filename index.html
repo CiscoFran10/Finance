@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="./styles/style.min.css">
+</head>
+
+<body>
+    <div class="header-bg">
+        <div class="container">
+            <header class="header">
+                <div class="logo title-1"><span>Control</span> Finance</div>
+                <nav>
+                    <button class="btn bt-primary" data-control-modal="insert-value">Registrar novo valor</button>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <main id="app">
+        <div class="container">
+            <section class="app-header">
+                <h1 class="title-2-md">Resumo financeiro</h1>
+                <ul class="filter-list" data-filter="filter-list">
+                    <button class="btn bt-outline" id="all">Todos</button>
+                    <button class="btn bt-outline" id="0">Entradas
+                    </button>
+                    <button class="btn bt-outline" id="1">Saídas</button>
+                </ul>
+            </section>
+
+            <section class="app-body">
+                <div class="finance-total">
+                    <h1 class="text-1-md">Soma dos valores</h1>
+                    <span class="text-1-md" data-finance="total">R$ 2.200,00</span>
+                </div>
+
+                <ul class="finance-list" data-finance="list">
+                </ul>
+                <div class="empty" data-control-modal="insert-value">
+                    <h1 class="title-2-b">Nenhum valor cadastrado</h1>
+                    <p class="text-1-md">Registrar novo valor</p>
+                </div>
+            </section>
+        </div>
+        </section>
+        </div>
+    </main>
+
+    <div class="modal-container" id="insert-value">
+        <div class="container">
+            <div class="modal">
+                <div class="modal-header">
+                    <h1 class="title-2-b">Registro de valor</h1>
+                    <button data-control-modal="insert-value" class="btn bt-greylow">X</button>
+                </div>
+
+                <form class="modal-body">
+                    <p class="text-1">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
+
+                    <label class="text-1-md" for="value">Valor</label>
+                    <input class="modal-form input" type="number" id="value" name="value" placeholder="R$ 00,00" required>
+
+                    <div class="flex">
+                        <p class="text-1-md">Tipo de valor</p>
+
+                        <label class="btn bt-outline" tabindex="0">Entrada
+                            <input type="radio" hidden value="0" name="valueType">
+                        </label>
+
+                        <label class="btn bt-outline" tabindex="0">Saída
+                            <input type="radio" hidden value="1" name="valueType">
+                        </label>
+
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button data-control-modal="insert-value" class="btn bt-greylow">Cancelar</button>
+                        <button data-control-modal="send-value" class="btn bt-primary">Inserir valor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/modal.js"></script>
+    <script src="./scripts/filter.js"></script>
+    <script src="./scripts/update-total.js"></script>
+    <script src="./pages/home/index.js"></script>
+</body>
+
+</html>

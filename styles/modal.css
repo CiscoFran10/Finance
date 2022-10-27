@@ -1,0 +1,78 @@
+.modal-container.active {
+	display: flex;
+}
+
+.modal-container {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--color-grey-1-opacity-5);
+}
+
+.modal {
+	max-width: 430px;
+	background-color: var(--fixed-white);
+	padding: 1.5rem;
+	border-radius: var(--radius-1);
+	display: grid;
+	gap: 30px;
+	animation: slide 0.3s ease;
+}
+
+@keyframes slide {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.modal-body .input {
+	padding: 0rem 1rem;
+	height: 40px;
+	border: 1.5px solid var(--color-grey-3);
+	border-radius: var(--radius-1);
+	outline-color: var(--color-brand-1);
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.modal-body .input[type="text"] {
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-3);
+	color: var(--color-grey-1);
+}
+
+.modal-buttons {
+	display: flex;
+	gap: 12px;
+	align-self: flex-end;
+}
+
+.modal-body input[type="radio"]:checked label {
+	background-color: blue !important;
+}

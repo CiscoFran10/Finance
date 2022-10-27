@@ -1,0 +1,6 @@
+@import "./globalStyles.css";
+@import "./fonts.css";
+@import "./buttons.css";
+@import "./header.css";
+@import "./modal.css";
+@import "../pages/home/index.css";
